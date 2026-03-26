@@ -6,7 +6,7 @@ Git/Bitbucket administration, PowerShell automation, and merge management.
 
 ## What I'm building here
 
-A structured learning journey from March to August 2026, working toward:
+A structured learning journey working toward:
 - AWS Certified Cloud Practitioner (CLF-C02)
 - HashiCorp Terraform Associate 004
 
@@ -22,10 +22,10 @@ Prometheus/Grafana, Terraform, AWS
 
 | Folder | Topic | Status |
 |---|---|---|
-| week1-ci | GitHub Actions Pipeline | 🔜 |
-| week4-docker | Docker & Compose | 🔜 |
-| week8-k8s | Kubernetes + Helm + GitOps | 🔜 |
-| week14-terraform | Terraform IaC | 🔜 |
+| github-actions | CI/CD, Secrets, Matrix-Build | ✅ Done |
+| docker | Container, Compose, CI/CD Pipeline | 🔧 Upcoming |
+| kubernetes | K8s, Helm, GitOps, ArgoCD | 🔜 |
+| terraform | IaC, State, Module, AWS | 🔜 |
 
 ## Setup
 
