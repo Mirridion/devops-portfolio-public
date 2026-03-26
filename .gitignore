@@ -1,0 +1,23 @@
+# Secrets & Credentials
+.env
+*.pem
+.aws/
+
+# Terraform
+*.tfvars
+*.tfstate
+*.tfstate.backup
+.terraform/
+.terraform.lock.hcl
+crash.log
+
+# Docker
+.dockerenv
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+*.swp
