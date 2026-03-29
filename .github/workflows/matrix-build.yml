@@ -1,0 +1,42 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Week1-Matrix-Build
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: ["*"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "py-versions"
+  py-versions:
+    strategy:
+      matrix:
+        os: [ubuntu-24.04, windows-2025]
+        py-version: ["3.10", "3.11", "3.12"]
+        exclude:
+          - py-version: "3.10"
+            os: ubuntu-24.04
+          - py-version: "3.12"
+            os: windows-2025
+
+    # The type of runner that the job will run on
+    runs-on: ${{ matrix.os }}
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Setup different versions of python
+      - uses: actions/checkout@v6
+      - name: Set up python ${{ matrix.py-version }}
+        uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.py-version }}
+
+      # Runs a set of commands using the runners shell
+      - name: Check python version
+        run: python --version
